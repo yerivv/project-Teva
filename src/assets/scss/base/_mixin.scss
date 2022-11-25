@@ -1,0 +1,22 @@
+@mixin mo-min-width{min-width:280px;}
+@mixin pc-min-width{min-width:1263px;}
+
+@mixin mo-scroll{overflow:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+
+@mixin float-clear{
+    &:after{content:"";display:block;clear:both;}
+}
+
+@mixin img-cover{background-position:center center;background-repeat:no-repeat;background-size:cover;}
+
+@mixin ellipsis($w){text-overflow:ellipsis;overflow:hidden;max-width:$w;white-space:nowrap;}
+
+@mixin ellipsis-multi($line,$lh){display:-webkit-box;-webkit-line-clamp:$line;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;max-height:$line*$lh;white-space:normal;}
+
+@mixin flex-column{display:flex;flex-direction:column;}
+
+@mixin flex-column-reverse{display:flex;flex-direction:column-reverse;}
+
+@mixin flex-row{display:flex;flex-direction:row;}
+
+@mixin flex-row-reverse{display:flex;flex-direction:row-reverse;}

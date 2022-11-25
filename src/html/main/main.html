@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('@@webRoot/_include/head.html',{
+        "title": "메인"
+    })
+    @@include('@@webRoot/_include/library.html')
+    <script src="@@webRoot/js/ui.js"></script>
+    <script src="@@webRoot/js/develop.js"></script>
+</head>
+<body>
+    <div id="app">
+        @@include('@@webRoot/_include/header.html')
+
+        @@include('@@webRoot/_include/aside.html')
+
+        <main id="container">
+            <button type="button" onclick="modal.in('sample');">모달</button>
+            <br>
+            <br>
+            <button type="button" onclick="popup('../popup/sample.html', 'sample', '500', '700');">팝업</button>
+        </main>
+
+        @@include('@@webRoot/_include/footer.html')
+
+        @@include('@@webRoot/_include/foot.html')
+
+        @@include('@@webRoot/_include/modal.html')
+    </div>
+    
+    <script>
+    </script>
+</body>
+</html>
