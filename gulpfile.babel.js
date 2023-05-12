@@ -204,7 +204,7 @@ const live = {
 	},
 	server() {
 		browserSync.init({
-			port: 5000,
+			port: 2023,
 			startPath: 'index.html',
 			server: {
 				baseDir: 'local/',

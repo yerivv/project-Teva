@@ -28,5 +28,8 @@
     "gulp-w3c-html-validator": "^5.1.4",
     "inquirer": "^9.1.4",
     "sass": "^1.56.1"
+  },
+  "dependencies": {
+    "swiper": "^9.3.0"
   }
 }

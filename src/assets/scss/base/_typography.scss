@@ -1,4 +1,4 @@
-@mixin text{word-wrap:break-word;font-size:14px;color:$basic-color1;line-height:1.5;font-weight:400;font-family:'Noto Sans KR';}
+@mixin text{word-wrap:break-word;color:$basic-color1;line-height:1.5;font-weight:400;font-family:'Noto Sans KR';}
 
 @mixin text-head1{font-size:20px;color:$basic-color1;line-height:1.5;font-weight:700;}
 
