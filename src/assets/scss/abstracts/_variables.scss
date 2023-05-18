@@ -12,3 +12,26 @@ $bg-color2:#f9f9f9;
 
 $line-color1:#c7c7c7;
 $line-color2:#eaeaea;
+
+//url
+$img-url: '';
+$font-url: '';
+
+//분기점 (~479, 480~767, 768~1023, 1024~1279, 1280~)
+$breakpoint-xSmall: 479px;
+$breakpoint-small: 480px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+$breakpoint-xLarge: 1280px;
+
+//font
+$html-font-size: 62.5%;
+
+//form
+
+
+//button Btn
+//button size (이름, 높이, 좌우여백, 폰트크기)
+$btn-size: 'xSmall' 30 5 15, 'small' 36 8 18;
+//button color (이름, 배경색, 선색, 폰트색)
+$btn-color: 'white' #fff $basic-color2  $basic-color2, 'black' #000 $basic-color1  $point-color3;

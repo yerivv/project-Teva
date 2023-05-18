@@ -8,8 +8,11 @@
 		url('../fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype');
 }
 
-@mixin text{word-wrap:break-word;color:$basic-color1;line-height:1.5;font-weight:400;font-family:'Noto Sans KR';}
+html {
+	font-size: $html-font-size;
+}
 
-@mixin text-head1{font-size:20px;color:$basic-color1;line-height:1.5;font-weight:700;}
-
-@mixin text-body1{font-size:14px;color:$basic-color1;line-height:1.5;font-weight:400;}
+body {
+	color: $basic-color1;
+	font-size: 1rem;
+}

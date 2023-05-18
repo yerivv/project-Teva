@@ -1,0 +1,9 @@
+//단위제거 함수
+@function deUnit($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+//px -> rem
+@function rem($px, $fontBase: 10) {
+  @return calc($px / $fontBase) * 1rem;
+} 

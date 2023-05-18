@@ -1,22 +1,41 @@
-@mixin mo-min-width{min-width:280px;}
-@mixin pc-min-width{min-width:1263px;}
-
-@mixin mo-scroll{overflow:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;}
-
-@mixin float-clear{
-    &:after{content:"";display:block;clear:both;}
+//responsive
+@mixin respond-to($breakpoint){
+    @if($breakpoint == xSmall){
+        @media (max-width: $breakpoint-xSmall){
+            @content;
+        }
+    }
+    @else if($breakpoint == small){
+        @media (min-width: $breakpoint-small){
+            @content;
+        }
+    }
+    @else if($breakpoint == medium){
+        @media (min-width: $breakpoint-medium){
+            @content;
+        }
+    }
+    @else if($breakpoint == large){
+        @media (min-width: $breakpoint-large){
+            @content;
+        }
+    }
+    @else if($breakpoint == xLarge){
+        @media (min-width: $breakpoint-xLarge){
+            @content;
+        }
+    }
+    @else{
+        @error 'UNKNOWN MEDIA BREAKPOINT #{$breakpoint}';
+    }
 }
 
-@mixin img-cover{background-position:center center;background-repeat:no-repeat;background-size:cover;}
-
-@mixin ellipsis($w){text-overflow:ellipsis;overflow:hidden;max-width:$w;white-space:nowrap;}
-
-@mixin ellipsis-multi($line,$lh){display:-webkit-box;-webkit-line-clamp:$line;-webkit-box-orient:vertical;text-overflow:ellipsis;overflow:hidden;max-height:$line*$lh;white-space:normal;}
-
-@mixin flex-column{display:flex;flex-direction:column;}
-
-@mixin flex-column-reverse{display:flex;flex-direction:column-reverse;}
-
-@mixin flex-row{display:flex;flex-direction:row;}
-
-@mixin flex-row-reverse{display:flex;flex-direction:row-reverse;}
+//button
+@each $sizeName, $h, $space, $fs in $btn-size{
+    .btn.#{$sizeName} {
+        height: rem($h);
+        padding-left: rem($space);
+        padding-right: rem($space);
+        font-size: rem($fs);
+    }
+}

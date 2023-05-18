@@ -1,0 +1,10 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+
+  &.small {
+    background-color:#222;
+  }
+}
