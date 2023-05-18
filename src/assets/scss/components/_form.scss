@@ -9,24 +9,24 @@ input[type=password],
 input[type=number],
 input[type=tel],
 input[type=search],
-input[type=email]{color:red;}
+input[type=email]{border:1px solid $line-color1;color:$basic-color1;}
 input[type=text]::placeholder,
 input[type=password]::placeholder,
 input[type=number]::placeholder,
 input[type=tel]::placeholder,
 input[type=search]::placeholder,
-input[type=email]::placeholder{color:gray;}
+input[type=email]::placeholder{color:$basic-color4;}
 input[type=text]:disabled,
 input[type=password]:disabled,
 input[type=number]:disabled,
 input[type=tel]:disabled,
 input[type=search]:disabled,
-input[type=email]:disabled{background:gray;}
+input[type=email]:disabled{background-color:$bg-color1;color:$basic-color3;}
 
 input[type=file]{color:red;}
 
 textarea{color:red;}
-textarea::placeholder{color:gray}
+textarea::placeholder{color:$basic-color3}
 textarea:disabled{background:gray;}
 
 select{color:red;}

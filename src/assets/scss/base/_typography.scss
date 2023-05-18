@@ -1,3 +1,13 @@
+@font-face {
+	font-family:'Noto Sans KR';
+	font-style:normal;
+	font-weight:400; 
+	src:url('../fonts/NotoSansKR-Regular.eot');
+	src:url('../fonts/NotoSansKR-Regular.woff') format('woff'),
+		url('../fonts/NotoSansKR-Regular.otf') format('otf'),
+		url('../fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype');
+}
+
 @mixin text{word-wrap:break-word;color:$basic-color1;line-height:1.5;font-weight:400;font-family:'Noto Sans KR';}
 
 @mixin text-head1{font-size:20px;color:$basic-color1;line-height:1.5;font-weight:700;}

@@ -15,7 +15,22 @@
         @@include('@@webRoot/_include/aside.html')
 
         <main id="container">
-            가이드
+            <h2>가이드</h2>
+            <div class="guide-section">
+                <dl>
+                    <dt>Form</dt>
+                    <dd>
+                        <div>
+                            <input type="text" name="input-text-1" id="" placeholder="텍스트 박스" />
+                            <input type="text" name="input-text-1" id="" placeholder="텍스트 박스" value="기본" />
+                        </div>
+                        <div>
+                            <input type="text" name="input-text-2" id="" disabled placeholder="텍스트 박스 disabled" />
+                            <input type="text" name="input-text-2" id="" disabled placeholder="텍스트 박스 disabled" value="유형1" />
+                        </div>
+                    </dd>
+                </dl>
+            </div>
         </main>
 
         @@include('@@webRoot/_include/footer.html')
