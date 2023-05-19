@@ -13,11 +13,13 @@ $bg-color2:#f9f9f9;
 $line-color1:#c7c7c7;
 $line-color2:#eaeaea;
 
+$gnb-bg: #222;
+
 //url
 $img-url: '../images/';
 $font-url: '../fonts/';
 
-//font
+//font 
 $html-font-size: 62.5%;
 $font-name1: 'SUIT';
 $font-name2: 'Pretendard';
@@ -55,10 +57,12 @@ $form-readonly-color: #777;
 
 
 //button Btn
-//button size (이름, 높이, 좌우여백, 폰트크기)
+//button size (이름, 높이, 좌우여백, 폰트크기, 굵기)
 $btn-size: (
-  'xSmall' 30 5 12,
-  'small' 36 8 14,
+  'xSmall' 30 5 12 300,
+  'small' 36 8 14 400,
+  'medium' 40 16 18 500,
+  'large' 60 16 22 700,
 );
 //button color (이름, 배경색, 선색, 폰트색)
 $btn-color: (

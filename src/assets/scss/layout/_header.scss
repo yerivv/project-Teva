@@ -1,6 +1,20 @@
 #header {
   h1 {
-    color: $point-color1;
+    background-image:url('#{$img-url}/common/logo.png');
+    background-repeat: no-repeat;
+  }
+  .section-logo {
+    background-color: $gnb-bg;
+    @include respond-to('large'){
+      padding:0 rem($content-space-large);
+    }
+    @include respond-to('xLarge'){
+      padding:0 rem($content-space-xLarge);
+    }
+    transition: all 0.2s;
+    .gnb li a {
+      color: $basic-color5
+    }
   }
 }
 

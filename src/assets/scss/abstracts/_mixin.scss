@@ -21,12 +21,13 @@
 
 
 //button
-@each $sizeName, $h, $space, $fs in $btn-size{
+@each $sizeName, $h, $space, $fs, $fw in $btn-size{
     .btn.#{$sizeName} {
         height: rem($h);
         padding-left: rem($space);
         padding-right: rem($space);
         font-size: rem($fs);
+        font-weight: $fw;
     }
 }
 @each $colorName, $bg, $line, $fc in $btn-color{

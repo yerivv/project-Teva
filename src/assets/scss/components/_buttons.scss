@@ -8,7 +8,10 @@
   background-color: $basic-color5;
   border: 1px solid $basic-color2;
   color: $basic-color2;
-  &.small {
-    //background-color:#222;
+  &:hover {
+    color:#fff;
+  }
+  &.large {
+    width: rem(200);
   }
 }
