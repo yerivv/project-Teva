@@ -38,7 +38,7 @@ const ROUTES = {
 		DEVELOP: DIR.SRC + 'assets/js/develop.js',
 		CSS: DIR.SRC + 'assets/scss/**/*.{scss,css}',
 		LIB: DIR.SRC + 'assets/lib/**/*.*',
-		FONTS: DIR.SRC + 'assets/fonts/*.*',
+		FONTS: DIR.SRC + 'assets/fonts/**/*.*',
 		IMAGE: DIR.SRC + 'assets/images/**/*.{gif,jpg,png}',
 		MEDIA: DIR.SRC + 'assets/media/**/*.*',
 	},

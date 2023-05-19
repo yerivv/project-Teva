@@ -2,10 +2,10 @@ $basic-color1:#000;
 $basic-color2:#222;
 $basic-color3:#777;
 $basic-color4:#aaa;
+$basic-color5:#fff;
 
 $point-color1:#c29721;
 $point-color2:#8f6f18;
-$point-color3:#fff;
 
 $bg-color1:#f3f3f3;
 $bg-color2:#f9f9f9;
@@ -14,24 +14,57 @@ $line-color1:#c7c7c7;
 $line-color2:#eaeaea;
 
 //url
-$img-url: '';
-$font-url: '';
-
-//분기점 (~479, 480~767, 768~1023, 1024~1279, 1280~)
-$breakpoint-xSmall: 479px;
-$breakpoint-small: 480px;
-$breakpoint-medium: 768px;
-$breakpoint-large: 1024px;
-$breakpoint-xLarge: 1280px;
+$img-url: '../images/';
+$font-url: '../fonts/';
 
 //font
 $html-font-size: 62.5%;
+$font-name1: 'SUIT';
+$font-name2: 'Pretendard';
+
+//분기점 (~479, 480~767, 768~1023, 1024~1279, 1280~)
+$breakpoints: (
+  'xSmall': (max-width: 479px),
+  'small': (min-width: 480px),
+  'medium': (min-width: 768px),
+  'large': (min-width: 1024px),
+  'xLarge': (min-width: 1280px),
+);
+
+//컨텐츠 여백
+$content-space-small: 0;
+$content-space-large: 16;
+$content-space-xLarge: 80;
 
 //form
+$form-placeholder: #ccc;
+$form-side-space: 8;
+$form-default-bg: #fff;
+$form-default-line: #c7c7c7;
+$form-default-color: #222;
+
+$form-focus-line: #222;
+
+$form-disabled-bg: #f8f8f8;
+$form-disabled-line: #eaeaea;
+$form-disabled-color: #aaa;
+
+$form-readonly-bg: #f8f8f8;
+$form-readonly-line: #c7c7c7;
+$form-readonly-color: #777;
 
 
 //button Btn
 //button size (이름, 높이, 좌우여백, 폰트크기)
-$btn-size: 'xSmall' 30 5 15, 'small' 36 8 18;
+$btn-size: (
+  'xSmall' 30 5 12,
+  'small' 36 8 14,
+);
 //button color (이름, 배경색, 선색, 폰트색)
-$btn-color: 'white' #fff $basic-color2  $basic-color2, 'black' #000 $basic-color1  $point-color3;
+$btn-color: (
+  'point1' $point-color1 $point-color1 $basic-color5,
+  'point2' $basic-color5 $point-color1 $point-color1,
+  'black1' $basic-color1 $basic-color1 $basic-color5,
+  'black2' $basic-color5 $basic-color1 $basic-color1,
+  'gray1' $bg-color1 $basic-color4 $basic-color4,
+)

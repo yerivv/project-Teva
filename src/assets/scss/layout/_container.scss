@@ -1,0 +1,11 @@
+#container {
+  padding: 0;
+  @include respond-to('large'){
+    padding:0 rem($content-space-large);
+  }
+  @include respond-to('xLarge'){
+    padding:0 rem($content-space-xLarge);
+  }
+
+  transition: all 0.2s;
+}

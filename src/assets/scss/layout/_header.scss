@@ -1,1 +1,12 @@
-#header{background:red;}
+#header {
+  h1 {
+    color: $point-color1;
+  }
+}
+
+.header-text-ad {
+  padding: rem(10);
+  background-color: $point-color1;
+  color: $basic-color5;
+  text-align: center;
+}

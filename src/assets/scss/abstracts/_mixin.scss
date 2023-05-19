@@ -1,34 +1,24 @@
 //responsive
 @mixin respond-to($breakpoint){
-    @if($breakpoint == xSmall){
-        @media (max-width: $breakpoint-xSmall){
+    $raw-query: map-get($breakpoints, $breakpoint);
+    @if $raw-query {
+        $query: if(
+            type-of($raw-query) == 'string',
+            unquote($raw-query),
+            inspect($raw-query)
+        );
+
+        @media #{$query} {
             @content;
         }
-    }
-    @else if($breakpoint == small){
-        @media (min-width: $breakpoint-small){
-            @content;
-        }
-    }
-    @else if($breakpoint == medium){
-        @media (min-width: $breakpoint-medium){
-            @content;
-        }
-    }
-    @else if($breakpoint == large){
-        @media (min-width: $breakpoint-large){
-            @content;
-        }
-    }
-    @else if($breakpoint == xLarge){
-        @media (min-width: $breakpoint-xLarge){
-            @content;
-        }
-    }
-    @else{
-        @error 'UNKNOWN MEDIA BREAKPOINT #{$breakpoint}';
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. '
+            + 'Please make sure it is defined in `$breakpoints` map.';
     }
 }
+
+//font
+
 
 //button
 @each $sizeName, $h, $space, $fs in $btn-size{
@@ -37,5 +27,12 @@
         padding-left: rem($space);
         padding-right: rem($space);
         font-size: rem($fs);
+    }
+}
+@each $colorName, $bg, $line, $fc in $btn-color{
+    .btn.#{$colorName} {
+        background-color: $bg;
+        border-color: $line;
+        color: $fc;
     }
 }

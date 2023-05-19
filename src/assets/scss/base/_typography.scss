@@ -1,11 +1,63 @@
 @font-face {
-	font-family:'Noto Sans KR';
-	font-style:normal;
-	font-weight:400; 
-	src:url('../fonts/NotoSansKR-Regular.eot');
-	src:url('../fonts/NotoSansKR-Regular.woff') format('woff'),
-		url('../fonts/NotoSansKR-Regular.otf') format('otf'),
-		url('../fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype');
+	font-family: $font-name1;
+	font-weight: 100;
+	src: local('#{$font-name1} Thin'), 
+				url('#{$font-url}#{$font-name1}/#{$font-name1}-Thin.woff2') format('woff2'), 
+				url('../../font/SUIT-Thin.ttf') format('truetype');
+}
+@font-face {
+	font-family: $font-name1;
+	font-weight: 200;
+	src: local('SUIT ExtraLight'), url('../../font/SUIT-ExtraLight.woff2') format('woff2'), url('../../font/SUIT-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+	font-family: $font-name1;
+	font-weight: 300;
+	src: local('SUIT Light'), url('../../font/SUIT-Light.woff2') format('woff2'), url('../../font/SUIT-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: $font-name1;
+	font-weight: 400;
+	src: local('SUIT Regular'), url('../../font/SUIT-Regular.woff2') format('woff2'), url('../../font/SUIT-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: $font-name1;
+	font-weight: 500;
+	src: local('SUIT Medium'), url('../../font/SUIT-Medium.woff2') format('woff2'), url('../../font/SUIT-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: $font-name1;
+	font-weight: 600;
+	src: local('SUIT SemiBold'), url('../../font/SUIT-SemiBold.woff2') format('woff2'), url('../../font/SUIT-SemiBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: $font-name1;
+	font-weight: 700;
+	src: local('SUIT Bold'), url('../../font/SUIT-Bold.woff2') format('woff2'), url('../../font/SUIT-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: $font-name1;
+	font-weight: 800;
+	src: local('SUIT ExtraBold'), url('../../font/SUIT-ExtraBold.woff2') format('woff2'), url('../../font/SUIT-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: $font-name1;
+	font-weight: 900;
+	src: local('SUIT Heavy'), url('../../font/SUIT-Heavy.woff2') format('woff2'), url('../../font/SUIT-Heavy.ttf') format('truetype');
+}
+
+/* 가격, 상품아이콘 */
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url('../../font/Pretendard-ExtraBold.subset.woff2') format('woff2'), url('../../font/Pretendard-ExtraBold.subset.woff') format('woff');
+}
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url('../../font/Pretendard-Black.subset.woff2') format('woff2'), url('../../font/Pretendard-Black.subset.woff') format('woff');
 }
 
 html {
@@ -14,5 +66,5 @@ html {
 
 body {
 	color: $basic-color1;
-	font-size: 1rem;
+	font-size: 1.6rem;
 }
