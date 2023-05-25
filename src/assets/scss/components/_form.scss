@@ -1,16 +1,10 @@
-input[type=checkbox]{border:1px solid red;}
-input[type=checkbox]:checked{border:1px solid black;}
-
-input[type=radio]{border:1px solid red;}
-input[type=radio]:checked{border:1px solid black;}
-
 input[type=text],
 input[type=password],
 input[type=number],
 input[type=tel],
 input[type=search],
 input[type=email]{
-  height: rem(36);
+  height: rem($form-height);
   padding: 0 rem($form-side-space);
   background-color: $form-default-bg;
   border: 1px solid $form-default-line;
@@ -21,24 +15,149 @@ input[type=password]:disabled,
 input[type=number]:disabled,
 input[type=tel]:disabled,
 input[type=search]:disabled,
-input[type=email]:disabled{background-color:$bg-color1;color:$basic-color3;}
+input[type=email]:disabled{
+  background-color: $form-disabled-bg;
+  color: $form-disabled-color;
+}
 input[type=text]::placeholder,
 input[type=password]::placeholder,
 input[type=number]::placeholder,
 input[type=tel]::placeholder,
 input[type=search]::placeholder,
-input[type=email]::placeholder{color:$form-placeholder;}
+input[type=email]::placeholder{
+  color: $form-placeholder;
+}
 
 input[type=file]{color:red;}
 
-textarea{color:red;}
-textarea::placeholder{color:$basic-color3}
-textarea:disabled{background:gray;}
-
-select{
-  height: rem(36);
-  padding: 0 rem($form-side-space);
+textarea{
+  padding: rem($form-side-space);
   background-color: $form-default-bg;
   border: 1px solid $form-default-line;
   color: $form-default-color;
+}
+textarea:disabled{
+  background-color: $form-disabled-bg;
+  color: $form-disabled-color;
+}
+textarea::placeholder{
+  color: $form-placeholder;
+}
+
+.select {
+  display: inline-block;
+  position: relative;
+  background-color: $form-default-bg;
+  border: 1px solid $form-default-line;
+  &::after {
+    content: '';
+    position: absolute;
+    right: rem(10);
+    top: 30%;
+    width: rem(8);
+    height: rem(8);
+    border-top: rem(1) solid $basic-color2;
+    border-right: rem(1) solid $basic-color2;
+    transform: rotate(135deg);
+  }
+  select{
+    height: rem($form-height - 2);
+    padding: 0 rem($form-height - 2) 0 rem($form-side-space);
+    border-width: 0;
+    color: $form-default-color;
+  }
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  min-width: rem($checkbox-size);
+  min-height: rem($checkbox-size);
+  input {
+    position: relative;
+    width: rem($checkbox-size);
+    height: rem($checkbox-size);
+    background-color: $form-default-bg;
+    border: 1px solid $form-default-line;
+    cursor: pointer;
+    +label {
+      margin-left: rem($form-side-space);
+      color: $checkbox-default-color;
+      cursor: pointer;
+    }
+
+    &:checked {
+      background-color: $form-focus-bg;
+      border-color: $form-focus-line;
+      +label {
+        color: $checkbox-checked-color;
+      }
+    }
+  
+    &:disabled {
+      background-color: $form-disabled-bg;
+      border-color: $form-disabled-line;
+      +label {
+        color: $form-disabled-color;
+      }
+    }
+  }
+
+  +.checkbox {
+    margin-left: rem($form-side-space);
+  }
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  min-width: rem($radio-size);
+  min-height: rem($radio-size);
+  input {
+    position: relative;
+    width: rem($radio-size);
+    height: rem($radio-size);
+    background-color: $form-default-bg;
+    border: 1px solid $form-default-line;
+    border-radius: 50%;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem($radio-size - 8);
+      height: rem($radio-size - 8);
+      background-color: $radio-circle;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    +label {
+      margin-left: rem($form-side-space);
+      color: $radio-default-color;
+      cursor: pointer;
+    }
+
+    &:checked {
+      border-color: $form-focus-line;
+      &::after {
+        background-color: $radio-circle-checked;
+      }
+      +label {
+        color: $radio-checked-color;
+      }
+    }
+  
+    &:disabled {
+      background-color: $form-disabled-bg;
+      border-color: $form-disabled-line;
+      +label {
+        color: $form-disabled-color;
+      }
+    }
+  }
+
+  +.radio {
+    margin-left: rem($form-side-space);
+  }
 }

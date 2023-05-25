@@ -69,3 +69,20 @@ body {
 	color: $basic-color1;
 	font-size: 1.6rem;
 }
+
+.title {
+	text-transform: uppercase;
+	&-head {
+		padding: rem(16) 0;
+		font-size: rem(36);
+		text-align: center;
+	}
+	&-section {
+		padding-bottom: rem(8);
+		border-bottom: 2px solid $basic-color2;
+		font-size: rem(24);
+	}
+	&-content {
+		font-size: rem(18);
+	}
+}

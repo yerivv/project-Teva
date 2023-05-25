@@ -34,18 +34,20 @@ $breakpoints: (
 );
 
 //컨텐츠 여백
-$content-space-small: 0;
-$content-space-large: 16;
+$content-space: 16;
 $content-space-xLarge: 80;
 
 //form
+$form-height: 36;
 $form-placeholder: #ccc;
 $form-side-space: 8;
 $form-default-bg: #fff;
 $form-default-line: #c7c7c7;
 $form-default-color: #222;
 
+$form-focus-bg: #222;
 $form-focus-line: #222;
+$form-focus-color: #fff;
 
 $form-disabled-bg: #f8f8f8;
 $form-disabled-line: #eaeaea;
@@ -55,6 +57,15 @@ $form-readonly-bg: #f8f8f8;
 $form-readonly-line: #c7c7c7;
 $form-readonly-color: #777;
 
+$checkbox-size: 20;
+$checkbox-default-color: #777;
+$checkbox-checked-color: #222;
+
+$radio-size: 18;
+$radio-circle: #eaeaea;
+$radio-circle-checked: #222;
+$radio-default-color: #777;
+$radio-checked-color: #222;
 
 //button Btn
 //button size (이름, 높이, 좌우여백, 폰트크기, 굵기)

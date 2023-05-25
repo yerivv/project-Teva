@@ -15,46 +15,120 @@
         @@include('@@webRoot/_include/aside.html')
 
         <main id="container">
-            <h2>가이드</h2>
-            <div class="guide-section">
-                <dl>
-                    <dt>Form</dt>
-                    <dd>
-                        <div>
+            <div class="page-guide">
+                <h2 class="title-head">가이드</h2>
+                <div class="guide-section">
+                    <h3 class="title title-section">Form</h3>
+                    <dl>
+                        <dt><h4 class="title-content">textfild</h4></dt>
+                        <dd>
                             <input type="text" name="input-text-1" id="" placeholder="텍스트 박스" />
                             <input type="text" name="input-text-1" id="" placeholder="텍스트 박스" value="기본" />
-                        </div>
-                        <div>
+                        </dd>
+                        <dd>
                             <input type="text" name="input-text-2" id="" disabled placeholder="텍스트 박스 disabled" />
                             <input type="text" name="input-text-2" id="" disabled placeholder="텍스트 박스 disabled" value="유형1" />
-                        </div>
-                        <div>
-                            <select name="select1">
-                                <option value="">선택</option>
-                            </select>
-                        </div>
-                    </dd>
-                </dl>
-            </div>
+                        </dd>
 
-            <div class="guide-section">
-                <dl>
-                    <dt>Button</dt>
-                    <dd>
-                        <a href="#" class="btn">기본 버튼</a>
-                        <a href="#" class="btn xSmall">버튼명</a>
-                        <a href="#" class="btn small">버튼명</a>
-                        <a href="#" class="btn medium">버튼명</a>
-                        <a href="#" class="btn large">버튼명</a>
-                    </dd>
-                    <dd>
-                        <a href="#" class="btn point1">기본 버튼</a>
-                        <a href="#" class="btn point2">기본 버튼</a>
-                        <a href="#" class="btn black1">기본 버튼</a>
-                        <a href="#" class="btn black2">기본 버튼</a>
-                        <a href="#" class="btn gray1">기본 버튼</a>
-                    </dd>
-                </dl>
+                        <dt><h4 class="title-content">textarea</h4></dt>
+                        <dd>
+                            <textarea name="textarea-1" placeholder="입력하세요"></textarea>
+                            <textarea name="textarea-2" placeholder="입력하세요">입력하세요</textarea>
+                            <textarea name="textarea-2" disabled placeholder="입력하세요">입력하세요 disabled</textarea>
+                        </dd>
+                        
+                        <dt><h4 class="title-content">select box</h4></dt>
+                        <dd>
+                            <span class="select">
+                                <select name="select1">
+                                    <option value="">선택</option>
+                                </select>
+                            </span>
+                            <span class="select">
+                                <select name="select2" disabled="disabled">
+                                    <option value="">선택 disabled</option>
+                                </select>
+                            </span>
+                        </dd>
+
+                        <dt><h4 class="title-content">checkbox</h4></dt>
+                        <dd>
+                            <span class="checkbox">
+                                <input type="checkbox" name="input-check-1" id="input-check-11" value="" /><label for="input-check-11">체크박스</label>
+                            </span>
+                            <span class="checkbox">
+                                <input type="checkbox" name="input-check-1" id="input-check-12" checked="checked" value="" /><label for="input-check-12">체크박스</label>
+                            </span>
+                            <span class="checkbox">
+                                <input type="checkbox" name="input-check-1" id="input-check-13" disabled="disabled" value="" /><label for="input-check-13">체크박스</label>
+                            </span>
+                        </dd>
+
+                        <dt><h4 class="title-content">radio button</h4></dt>
+                        <dd>
+                            <span class="radio">
+                                <input type="radio" name="input-radio-1" id="input-radio-11" value="" /><label for="input-radio-11">라디오버튼</label>
+                            </span>
+                            <span class="radio">
+                                <input type="radio" name="input-radio-1" id="input-radio-12" checked="checked" value="" /><label for="input-radio-12">라디오버튼</label>
+                            </span>
+                            <span class="radio">
+                                <input type="radio" name="input-radio-1" id="input-radio-13" disabled="disabled" value="" /><label for="input-radio-13">라디오버튼</label>
+                            </span>
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="guide-section">
+                    <h3 class="title title-section">Button</h3>
+                    <dl>
+                        <dt><h4 class="title-content">Default</h4></dt>
+                        <dd>
+                            <a href="#" class="btn">기본 버튼</a>
+                            <a href="#" class="btn point1">기본 버튼</a>
+                            <a href="#" class="btn point2">기본 버튼</a>
+                            <a href="#" class="btn black1">기본 버튼</a>
+                            <a href="#" class="btn black2">기본 버튼</a>
+                            <a href="#" class="btn gray1">기본 버튼</a>
+                        </dd>
+                        <dt><h4 class="title-content">xSmall</h4></dt>
+                        <dd>
+                            <a href="#" class="btn xSmall">기본 버튼</a>
+                            <a href="#" class="btn xSmall point1">기본 버튼</a>
+                            <a href="#" class="btn xSmall point2">기본 버튼</a>
+                            <a href="#" class="btn xSmall black1">기본 버튼</a>
+                            <a href="#" class="btn xSmall black2">기본 버튼</a>
+                            <a href="#" class="btn xSmall gray1">기본 버튼</a>
+                        </dd>
+                        <dt><h4 class="title-content">small</h4></dt>
+                        <dd>
+                            <a href="#" class="btn small">기본 버튼</a>
+                            <a href="#" class="btn small point1">기본 버튼</a>
+                            <a href="#" class="btn small point2">기본 버튼</a>
+                            <a href="#" class="btn small black1">기본 버튼</a>
+                            <a href="#" class="btn small black2">기본 버튼</a>
+                            <a href="#" class="btn small gray1">기본 버튼</a>
+                        </dd>
+                        <dt><h4 class="title-content">medium</h4></dt>
+                        <dd>
+                            <a href="#" class="btn medium">기본 버튼</a>
+                            <a href="#" class="btn medium point1">기본 버튼</a>
+                            <a href="#" class="btn medium point2">기본 버튼</a>
+                            <a href="#" class="btn medium black1">기본 버튼</a>
+                            <a href="#" class="btn medium black2">기본 버튼</a>
+                            <a href="#" class="btn medium gray1">기본 버튼</a>
+                        </dd>
+                        <dt><h4 class="title-content">large</h4></dt>
+                        <dd>
+                            <a href="#" class="btn large">기본 버튼</a>
+                            <a href="#" class="btn large point1">기본 버튼</a>
+                            <a href="#" class="btn large point2">기본 버튼</a>
+                            <a href="#" class="btn large black1">기본 버튼</a>
+                            <a href="#" class="btn large black2">기본 버튼</a>
+                            <a href="#" class="btn large gray1">기본 버튼</a>
+                        </dd>
+                    </dl>
+                </div>
             </div>
         </main>
 

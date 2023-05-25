@@ -5,9 +5,7 @@
   }
   .section-logo {
     background-color: $gnb-bg;
-    @include respond-to('large'){
-      padding:0 rem($content-space-large);
-    }
+    padding:0 rem($content-space);
     @include respond-to('xLarge'){
       padding:0 rem($content-space-xLarge);
     }
