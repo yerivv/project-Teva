@@ -30,4 +30,6 @@ h1,h2,h3,h4,h5,h6,em,strong{font-weight:700;}
 input:disabled,
 textarea:disabled{opacity:1;-webkit-text-fill-color:inherit;}
 textarea:focus-visible{outline:none;}
-input{-webkit-appearance:none;border-radius:0;}
+input,
+select,
+textarea{-webkit-appearance:none;border-radius:0;}

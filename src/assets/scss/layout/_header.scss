@@ -1,24 +1,40 @@
 #header {
   h1 {
+    order:2;
+    width: rem(56);
+    height: 100%;
     background-image:url('#{$img-url}/common/logo.png');
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    text-indent: -9999em;
   }
-  .section-logo {
+  .section-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: rem(60);
+    padding: rem(5) rem(10);
     background-color: $gnb-bg;
     padding:0 rem($content-space);
     @include respond-to('xLarge'){
       padding:0 rem($content-space-xLarge);
     }
     transition: all 0.2s;
-    .gnb li a {
-      color: $basic-color5
+
+    .fa-regular, .fa-solid {
+      color: $basic-color5;
     }
   }
-}
+  .gnb li a {
+    @include en-upper;
+    color: $basic-color5
+  }
 
-.header-text-ad {
-  padding: rem(10);
-  background-color: $point-color1;
-  color: $basic-color5;
-  text-align: center;
+  .header-text-ad {
+    padding: rem(10);
+    background-color: $point-color1;
+    color: $basic-color5;
+    text-align: center;
+  }
 }

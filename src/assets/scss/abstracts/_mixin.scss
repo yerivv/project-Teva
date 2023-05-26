@@ -63,3 +63,7 @@
         }
     }
 }
+
+@mixin en-upper{
+    text-transform: uppercase;
+}

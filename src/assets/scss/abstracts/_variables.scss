@@ -58,6 +58,8 @@ $form-readonly-line: #c7c7c7;
 $form-readonly-color: #777;
 
 $checkbox-size: 20;
+$checkbox-arrow: #c7c7c7;
+$checkbox-arrow-checked: #fff;
 $checkbox-default-color: #777;
 $checkbox-checked-color: #222;
 
@@ -72,7 +74,7 @@ $radio-checked-color: #222;
 $btn-size: (
   'xSmall' 30 5 12 300,
   'small' 36 8 14 400,
-  'medium' 40 16 18 500,
+  'medium' 45 16 18 600,
   'large' 60 16 22 700,
 );
 //button color (이름, 배경색, 선색, 폰트색)

@@ -1,5 +1,10 @@
 @charset 'utf-8';
 
+//font icon
+@import "./fontawesome/fontawesome";
+@import "./fontawesome/solid";
+@import "./fontawesome/brands";
+
 @import './abstracts/variables';
 @import './abstracts/function';
 @import './abstracts/mixin';

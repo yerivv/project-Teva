@@ -60,11 +60,19 @@ textarea::placeholder{
     border-right: rem(1) solid $basic-color2;
     transform: rotate(135deg);
   }
+  &.disabled::after {
+    border-color: $form-disabled-color;
+  }
   select{
     height: rem($form-height - 2);
     padding: 0 rem($form-height - 2) 0 rem($form-side-space);
+    background-color: $form-default-bg;
     border-width: 0;
     color: $form-default-color;
+    &:disabled{
+      background-color: $form-disabled-bg;
+      color: $form-disabled-color;
+    }
   }
 }
 
@@ -80,6 +88,19 @@ textarea::placeholder{
     background-color: $form-default-bg;
     border: 1px solid $form-default-line;
     cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem($radio-size - 10);
+      height: rem($radio-size - 14);
+      border: 2px solid $checkbox-arrow;
+      border-top-width: 0;
+      border-right-width: 0;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      transform-origin: 25% 25%;
+    }
     +label {
       margin-left: rem($form-side-space);
       color: $checkbox-default-color;
@@ -89,6 +110,9 @@ textarea::placeholder{
     &:checked {
       background-color: $form-focus-bg;
       border-color: $form-focus-line;
+      &::after {
+        border-color: $checkbox-arrow-checked;
+      }
       +label {
         color: $checkbox-checked-color;
       }
