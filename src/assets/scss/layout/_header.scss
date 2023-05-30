@@ -14,17 +14,47 @@
     justify-content: space-between;
     align-items: center;
     height: rem(60);
-    padding: rem(5) rem(10);
     background-color: $gnb-bg;
     padding:0 rem($content-space);
     @include respond-to('xLarge'){
       padding:0 rem($content-space-xLarge);
     }
     transition: all 0.2s;
-
-    .fa-regular, .fa-solid {
+    [class^=fa]{
       color: $basic-color5;
     }
+
+    [class^=box]{
+      display: flex;
+      align-items: center;
+      gap:0 rem(16);
+    }
+    .box-left {
+      order: 1;
+    }
+    .box-right {
+      order: 3;
+      .cart{
+        position: relative;
+        span{
+          position: absolute;
+          top: rem(-8);
+          right: rem(-8);
+          width: rem(16);
+          height: rem(16);
+          background-color: $point-color1;
+          border-radius: 50%;
+          color: $basic-color5;
+          font-weight: 700;
+          font-size: rem(5);
+          line-height: rem(16);
+          text-align: center;
+        }
+      }
+    }
+  }
+  .gnb {
+    display: none;
   }
   .gnb li a {
     @include en-upper;
