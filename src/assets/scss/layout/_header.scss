@@ -67,4 +67,37 @@
     color: $basic-color5;
     text-align: center;
   }
+
+  @include respond-to('large'){
+    h1 {
+      order: 1;
+      width: rem(80);
+    }
+    .section-main {
+      justify-content: flex-start;
+      .box-left {
+        display: none;
+      }
+      .box-right {
+        margin-left: auto;
+      }
+      .gnb {
+        display: block;
+        order: 2;
+        margin-left: rem(24);
+        ul {
+          display: flex;
+
+          a {
+            padding:0 rem(16);
+            font-weight:700;
+
+            &:hover {
+              color: $point-color1;
+            }
+          }
+        }
+      }
+    }
+  }
 }
