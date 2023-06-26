@@ -60,14 +60,18 @@
 }
 
 html {
-	font-size: $html-font-size;
+	font-size: $font-size;
+	line-height: 1.285;
+	@media (min-width: 0px) and (max-width: 768px) {
+		font-size: $font-size-medium;
+	}
 }
 
 body {
 	font-family: $font-name1, sans-serif;
 	font-weight: 400;
 	color: $basic-color1;
-	font-size: 1.6rem;
+	font-size: rem(16);
 }
 
 .title {

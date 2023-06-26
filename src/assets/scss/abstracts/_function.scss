@@ -5,5 +5,6 @@
 
 //px -> rem
 @function rem($px, $fontBase: 10) {
-  @return calc($px / $fontBase) * 1rem;
+  $remSize: $px / $fontBase;
+  @return #{$remSize}rem;
 } 

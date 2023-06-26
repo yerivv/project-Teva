@@ -1,6 +1,6 @@
 #header {
   h1 {
-    order:2;
+    order: 2;
     width: rem(56);
     height: 100%;
     background-image:url('#{$img-url}/common/logo.png');
@@ -8,6 +8,11 @@
     background-position: center;
     background-size: 100%;
     text-indent: -9999em;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
   }
   .section-main {
     display: flex;
@@ -46,7 +51,7 @@
           border-radius: 50%;
           color: $basic-color5;
           font-weight: 700;
-          font-size: rem(5);
+          font-size: rem(10);
           line-height: rem(16);
           text-align: center;
         }
